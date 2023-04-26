@@ -140,7 +140,7 @@ public class EOSOnPostprocessBuild_Standalone:  IPostprocessBuildWithReport
 
     }
 #endif
-
+/*
     //use anticheat_integritytool to hash protected files and generate certificate for EAC
     private void GenerateIntegrityCert(BuildReport report, string pathToEACIntegrityTool, string productID, string keyFileName, string certFileName, string configFile = null)
     {
@@ -194,7 +194,7 @@ public class EOSOnPostprocessBuild_Standalone:  IPostprocessBuildWithReport
         process.WaitForExit();
         process.Close();
     }
-
+*/
     public static string GetRelativePath(string relativeTo, string path)
     {
         var uri = new Uri(relativeTo);
@@ -425,7 +425,7 @@ public class EOSOnPostprocessBuild_Standalone:  IPostprocessBuildWithReport
                 !string.IsNullOrWhiteSpace(editorToolConfig.pathToEACPrivateKey) &&
                 !string.IsNullOrWhiteSpace(editorToolConfig.pathToEACCertificate))
             {
-                GenerateIntegrityCert(report, editorToolConfig.pathToEACIntegrityTool, GetEOSConfig().productID, editorToolConfig.pathToEACPrivateKey, editorToolConfig.pathToEACCertificate, editorToolConfig.pathToEACIntegrityConfig);
+//                GenerateIntegrityCert(report, editorToolConfig.pathToEACIntegrityTool, GetEOSConfig().productID, editorToolConfig.pathToEACPrivateKey, editorToolConfig.pathToEACCertificate, editorToolConfig.pathToEACIntegrityConfig);
             }
         }
     }
